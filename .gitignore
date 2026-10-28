@@ -11,3 +11,7 @@
 # 编辑器
 .vscode/
 .idea/
+
+# temporary files
+_*.c
+_*.exe

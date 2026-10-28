@@ -4,17 +4,18 @@ int add(int a,int b){
 	return t;
 }
 int isprime(int n){
-	int i,isprime=1;
+	int i,prime=1;
+	if(n<2) prime=0;
 	for(i=2;i<n;i++){
-		if(n%i==0) isprime=0;
+		if(n%i==0) prime=0;
 	}
-	if(isprime) return 1;
-	else return 0;
+	return prime;
 }
 int maxOf3(int a, int b, int c){
-	if(a>b&&a>c) return a;
-	if(b>a&&b>c) return b;
-	if(c>a&&c>b) return c;
+	int m=a;
+	if(b>m) m=b;
+	if(c>m) m=c;
+	return m; 
 }
 int gcd(int a,int b){
 	int t;
@@ -23,4 +24,16 @@ int gcd(int a,int b){
 		a=b;
 		b=t;
 	}return a;
+}
+int lcm (int a,int b){
+	return a/gcd(a,b)*b;
+}
+int main(){
+    printf("%d\n", add(3, 4));       // 7
+    printf("%d\n", isprime(7));     // 1
+    printf("%d\n", isprime(1));     // 0  ¡û ±ß½ç
+    printf("%d\n", maxOf3(5, 5, 3)); // 5  ¡û ÏàµÈ
+    printf("%d\n", gcd(12, 18));     // 6
+    printf("%d\n", lcm(4, 6));       // 12
+    return 0;
 }
