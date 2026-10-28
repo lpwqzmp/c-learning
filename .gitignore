@@ -1,0 +1,13 @@
+# 编译产物
+*.exe
+*.o
+*.obj
+
+# Dev-C++ 工程文件
+*.layout
+*.debug
+*.depend
+
+# 编辑器
+.vscode/
+.idea/
